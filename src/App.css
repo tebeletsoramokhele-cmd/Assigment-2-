@@ -1,0 +1,305 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #222;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* HEADER */
+.header {
+  background-color: #17365d;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+.header h2 {
+  margin: 10px 0 25px;
+  font-weight: normal;
+}
+
+/* NAVIGATION */
+.header nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.header nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.header nav a:hover {
+  text-decoration: underline;
+}
+
+/* BUTTONS */
+.header-buttons {
+  margin-top: 20px;
+}
+
+button {
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+/* ALL SECTIONS */
+main > section {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* SECTION HEADINGS */
+main > section h2 {
+  color: #17365d;
+  border-bottom: 2px solid #17365d;
+  padding-bottom: 10px;
+}
+
+/* PROFILE */
+#profile h3 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+#profile h4 {
+  color: #555;
+  margin-top: 5px;
+}
+
+#profile p {
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+/* CONTACT */
+.contact p {
+  margin: 12px 0;
+}
+
+/* EDUCATION */
+#education > div {
+  background-color: #f7f9fb;
+  padding: 20px;
+  margin: 15px 0;
+  border-left: 5px solid #17365d;
+  border-radius: 5px;
+}
+
+#education h3 {
+  margin-top: 0;
+}
+
+/* SKILLS */
+#skills > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0;
+  list-style: none;
+}
+
+#skills li {
+  background-color: #17365d;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+/* EXPERIENCE */
+#experience > div {
+  background-color: #f7f9fb;
+  padding: 20px;
+  margin: 15px 0;
+  border-left: 5px solid #17365d;
+  border-radius: 5px;
+}
+
+#experience h3 {
+  margin-top: 0;
+}
+
+/* PROJECTS */
+#projects > div {
+  background-color: #f7f9fb;
+  padding: 20px;
+  margin: 15px 0;
+  border-left: 5px solid #17365d;
+  border-radius: 5px;
+}
+
+/* REFERENCES */
+.references-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  padding: 20px;
+  background-color: #f7f9fb;
+  border-left: 5px solid #17365d;
+  border-radius: 5px;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #17365d;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  margin-top: 40px;
+}
+
+.footer p {
+  margin: 8px;
+}
+
+/* DARK MODE */
+.dark-mode {
+  background-color: #121212;
+  color: #eeeeee;
+}
+
+.dark-mode main > section {
+  background-color: #1e1e1e;
+}
+
+.dark-mode #education > div,
+.dark-mode #experience > div,
+.dark-mode #projects > div,
+.dark-mode .card {
+  background-color: #2a2a2a;
+}
+
+.dark-mode main > section h2 {
+  color: #7db7ff;
+  border-color: #7db7ff;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .header h1 {
+    font-size: 28px;
+  }
+
+  .header nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  main > section {
+    margin: 20px 10px;
+    padding: 20px;
+  }
+
+  .references-container {
+    grid-template-columns: 1fr;
+  }
+
+  #skills > div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #skills ul {
+    padding-left: 0;
+  }
+}
+
+/* PRINT */
+@media print {
+
+  .header-buttons,
+  nav {
+    display: none;
+  }
+
+  .header {
+    background-color: white;
+    color: black;
+  }
+
+  main > section {
+    box-shadow: none;
+    margin: 10px 0;
+  }
+
+  .footer {
+    background-color: white;
+    color: black;
+  }
+}
+/* COMPONENT DETAILS */
+#experience ul {
+  padding-left: 20px;
+  line-height: 1.7;
+}
+
+#projects p,
+#experience p,
+#education p,
+.card p {
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.header-buttons button {
+  background-color: white;
+  color: #17365d;
+}
+
+.dark-mode .header-buttons button {
+  background-color: #2a2a2a;
+  color: white;
+}
+
+@media print {
+  a {
+    color: black;
+  }
+}
